@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-{% for info in object_list %}
+
     <div id="myCarousel" class="carousel slide mt-0" data-bs-ride="carousel">
     <ol class="carousel-indicators">
       <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
@@ -541,7 +541,5 @@
 
 </div>
 </div>
-{% empty %}
-{% endfor %}
 
 {% endblock %}
