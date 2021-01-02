@@ -10,7 +10,6 @@ class SiteInfor(models.Model):
     phone_contact_one = models.CharField(max_length=15, blank=True, null=True)
     phone_contact_two = models.CharField(max_length=15, blank=True, null=True)
     email_add_one = models.EmailField(blank=True, null=True)
-    email_add_two = models.EmailField(blank=True, null=True)
 
     def __str__(self):
         return self.company_name
