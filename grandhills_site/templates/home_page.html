@@ -2,5 +2,546 @@
 {% load static %}
 
 {% block content %}
-    <h1>Hello Jesus Loves you</h1>
+{% for info in object_list %}
+    <div id="myCarousel" class="carousel slide mt-0" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+      <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+
+             <!--_____________________________________________________________________________________-->
+      <div class="carousel-item active">
+        <img src="{% static 'grandhills_site/static-only/images/header-image-top2.jpg' %}" class="d-block w-100" alt="...">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>We are glad to have you.</h1>
+            <p>
+                You are very welcome Grand Hills Ltd's website where you will find all the information you need about
+                our company.
+            </p>
+            <p><a class="btn btn-lg btn-primary" href="##" role="button">View Location</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!--_____________________________________________________________________________________-->
+      <div class="carousel-item">
+        <img src="{% static 'grandhills_site/static-only/images/bottle-image1.jpg' %}" class="d-block w-100" alt="...">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Example headline.</h1>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p><a class="btn btn-lg btn-primary" href="{% url 'partner_with' %}" role="button">Partner With us</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!--_____________________________________________________________________________________-->
+      <div class="carousel-item">
+        <img src="{% static 'grandhills_site/static-only/images/bottle-image2.jpg' %}" class="d-block w-100" alt="...">
+
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Another example headline.</h1>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!--_____________________________________________________________________________________-->
+      <div class="carousel-item">
+        <img src="{% static 'grandhills_site/static-only/images/oil-refine-image.jpg' %}" class="d-block w-100" alt="...">
+
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>One more for good measure.</h1>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+          </div>
+        </div>
+      </div>
+
+
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </a>
+    </div>
+    </div>
+
+  <!-- JUMBOTROON AREA ------------------------>
+
+  <div class="container">
+    <h4 class="font-style-2" id="about">____About Us____</h4>
+    <div class="row">
+      <div class="col-lg-4 g-5">
+        <img class="rounded-circle" src="{% static 'grandhills_site/static-only/images/mic-image-edit.jpg' %}" width="140px" height="140px">
+      </div>
+
+      <div class="col-lg-8 g-0 ">
+        <div class="jumbotron">
+            <h1 class="display-4">GrandHills Welcomes You!</h1>
+            <p class="lead">
+                {{ info.about }}
+            </p>
+            <hr class="my-4">
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <p class="lead">
+              <a class="btn btn-primary btn-lg" href="##" role="button">Learn more</a>
+            </p>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- VISION - MISSION - OTHER DETAIL AREA ------------------------------------------------->
+    <div class="card mb-3 border-0 mt-5" style="max-width: 100%;">
+  <div class="row g-0">
+    <div class="col-md-3 mb-5">
+       <img class="rounded-circle" src="{% static 'grandhills_site/static-only/images/vision.jpg' %}" width="240px" height="240px">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title text-success font-style-1">Grand Hills Vision</h5>
+        <p class="card-text">
+          {{ info.company_vision }}
+        </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- road to universality -->
+<div class="card mb-5 border-0" style="max-width: 100%;">
+  <div class="row g-0">
+    <div class="col-md-3 mb-5">
+
+       <img class="rounded-circle" src="{% static 'grandhills_site/static-only/images/universality.jpg' %}" width="240px" height="240px">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title text-success font-style-1">Road to Universality</h5>
+        <p class="card-text">
+          {{ info.company_addi_info }}
+        </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+<!-- VISION - MISSION - AREA END ----------------------------------------->
+
+
+
+<!-- FACTORY AREA SECTION STARTS HERE ----------------------------->
+<div>
+  <div id="myCarousel-2" class="carousel slide" data-bs-ride="carousel">
+    <h4 class="me-5 right-float font-style-2 fs-2" id="factories">____Factories____</h4>
+    <ol class="carousel-indicators">
+      <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+      <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+
+      <!--_____________________________________________________________________________________-->
+      <div class="carousel-item active">
+        <img src="{% static 'grandhills_site/static-only/images/bottle-image1.jpg' %}" class="d-block w-100" alt="...">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Example headline.</h1>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!--_____________________________________________________________________________________-->
+      <div class="carousel-item">
+        <img src="{% static 'grandhills_site/static-only/images/bottle-image2.jpg' %}" class="d-block w-100" alt="...">
+
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Another example headline.</h1>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!--_____________________________________________________________________________________-->
+      <div class="carousel-item">
+        <img src="{% static 'grandhills_site/static-only/images/oil-refine-image.jpg' %}" class="d-block w-100" alt="...">
+
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>One more for good measure.</h1>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+          </div>
+        </div>
+      </div>
+
+       <!--_____________________________________________________________________________________-->
+        <div class="carousel-item">
+        <img src="{% static 'grandhills_site/static-only/images/oil-refine-image2.jpg' %}" class="d-block w-100" alt="...">
+
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>One more for good measure.</h1>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!--_____________________________________________________________________________________-->
+       <div class="carousel-item">
+        <img src="{% static 'grandhills_site/static-only/images/sunflower-oil.png' %}" class="d-block w-100" alt="...">
+
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>One more for good measure.</h1>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!--_____________________________________________________________________________________-->
+       <div class="carousel-item">
+        <img src="{% static 'grandhills_site/static-only/images/sunflower-oil5.jpg' %}" class="d-block w-100" alt="...">
+
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>One more for good measure.</h1>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!--_____________________________________________________________________________________-->
+       <div class="carousel-item">
+        <img src="{% static 'grandhills_site/static-only/images/santizer-image4.jpg' %}" class="d-block w-100" alt="...">
+
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>One more for good measure.</h1>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!--_____________________________________________________________________________________-->
+
+
+
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </a>
+  </div>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+
+      <div class="col-lg-4">
+       <img src="{% static 'grandhills_site/static-only/images/bottle-image2.jpg' %}" class="rounded" width="240" height="240" role="img">
+
+        <h2 class="font-style-1">Heading</h2>
+        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+
+      <div class="col-lg-4">
+        <img src="{% static 'grandhills_site/static-only/images/oil-refine-image.jpg' %}" class="rounded" width="240" height="240" role="img">
+
+        <h2 class="font-style-1">Heading</h2>
+        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+
+      <div class="col-lg-4">
+
+        <img src="{% static 'grandhills_site/static-only/images/bottle-image1.jpg' %}" class="rounded" width="240" height="240" role="img">
+
+        <h2 class="font-style-1">Heading</h2>
+        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <h4 class="pr-5 text-right font-style-2 fs-2" id="products">____Products____</h4>
+      <div class="col-md-7">
+        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      </div>
+      <div class="col-md-5">
+       <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+             height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+             preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+          <rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+       -->
+        <img class="img-clip-poly" src="{% static 'grandhills_site/static-only/images/sunflower-oil-2.png' %}">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+             height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+             preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+          <rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+        -->
+        <img class="img-clip-poly2" src="{% static 'grandhills_site/static-only/images/sara-soap.jpg' %}" width="350" height="350">
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      </div>
+      <div class="col-md-5">
+        <img class="img-clip-poly2" src="{% static 'grandhills_site/static-only/images/pharma-image7.jpg' %}" width="400" height="400">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+
+<!-- START OF SERVICE SECTION AREA ----------------------->
+ <!-- first service -->
+  <div class="container">
+      <h4 class="font-style-2 text-center" id="services">____Services____</h4>
+        <div class="card mb-3 border border-primary box-shadow-1">
+
+  <div class="row g-0 p-2 my-2">
+    <div class="col-md-4">
+       <img src="{% static 'grandhills_site/static-only/images/pharma-image7.jpg' %}" width="370px" height="310px">
+
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title text-success">Service One</h5>
+        <p class="card-text text-justify">
+          Grand Hills Industries Group adopts an advanced approach in the foundations of work, quality, production
+          efficiency and providing good job opportunities and national support as Grand Hills Industries works to improve the
+          living conditions of its employees and for each region by allocating part of its production to charitable work. Grand
+          Hills brings global experiences to transfer experiences to the people of the homeland, where Grand Hills raises the
+          flag of the awaited leader of Africa and the science of African science and development and a way of rapid progress
+          at the world level is the flag of the country, the flag of Rwanda is a country of peace and freedom and the true
+          meaning of citizenship.
+        </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+ <hr class="featurette-divider">
+
+<!-- second service -->
+<div class="card mb-5  border-primary box-shadow-1">
+  <div class="row g-0 p-2 my-2">
+
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title text-success">Service Two</h5>
+        <p class="card-text text-justify">
+          Through what Rwanda pursues from aspiration for economic growth and integration with international companies, Grand
+          Hills becomes a steady foot on the road to transition to the first row of companies supporting the Rwandan national
+          economy through development and exploitation of state resources for the industries that the country imports in
+          dollars and achieving self-sufficiency in oils and pure water sources and all materials.  Imported food.
+        </p>
+
+      </div>
+    </div>
+
+     <div class="col-md-4">
+
+        <img src="{% static 'grandhills_site/static-only/images/santizer-image2.jpg' %}" width="370px" height="310px">
+    </div>
+  </div>
+
+</div>
+ <hr class="featurette-divider">
+
+<!------------------------------------------------------------------>
+
+
+           <div class="card mb-3 border border-primary box-shadow-1">
+
+  <div class="row g-0 p-2 my-2">
+    <div class="col-md-4">
+       <img src="{% static 'grandhills_site/static-only/images/pharma-image3.jpg' %}" width="370px" height="310px">
+
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title text-success">Service One</h5>
+        <p class="card-text text-justify">
+          Grand Hills Industries Group adopts an advanced approach in the foundations of work, quality, production
+          efficiency and providing good job opportunities and national support as Grand Hills Industries works to improve the
+          living conditions of its employees and for each region by allocating part of its production to charitable work. Grand
+          Hills brings global experiences to transfer experiences to the people of the homeland, where Grand Hills raises the
+          flag of the awaited leader of Africa and the science of African science and development and a way of rapid progress
+          at the world level is the flag of the country, the flag of Rwanda is a country of peace and freedom and the true
+          meaning of citizenship.
+        </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+<!------------------END SERVICE SECTION ------------------------------->
+ <hr class="featurette-divider">
+
+<!------------------- CORE TEAM SECTION SECTION ----------------------->
+
+<div class="container marketing">
+  <h4 class="mb-5 text-center font-style-2" id="team">____Core Team____</h4>
+  <div class="row">
+
+      <div class="col-lg-4 border rounded border-primary pt-2 pb-2 px-0 m-3 w-25">
+       <img src="{% static 'grandhills_site/static-only/images/jp_me.jpg' %}"
+            class="rounded-circle" width="140" height="140" role="img">
+
+        <h5>Achire Johnpaul</h5>
+
+        <div class="border rounded border-primary m-2">
+             <h6 class="text-muted">C.E.O</h6>
+             <p class="">Company Director</p>
+             <p>Oversees all projects.</p>
+        </div>
+       <div class="border rounded bg-white m-2">
+            <img src="{% static 'grandhills_site/static-only/images/facebook.png' %}"
+            class="m-2" width="40" height="40" role="img">
+
+            <img src="{% static 'grandhills_site/static-only/images/twitter.png' %}"
+            class="m-2" width="40" height="40" role="img">
+
+            <img src="{% static 'grandhills_site/static-only/images/instagram.png' %}"
+            class="m-2" width="40" height="40" role="img">
+
+            <img src="{% static 'grandhills_site/static-only/images/google-plus.png' %}"
+            class="m-2" width="40" height="40" role="img">
+
+       </div>
+
+
+      </div><!-- /.col-lg-4 -->
+
+
+    <div class="col-lg-4 border rounded border-primary pt-2 pb-2 px-0 m-3 w-25">
+       <img src="{% static 'grandhills_site/static-only/images/jp_me.jpg' %}"
+            class="rounded-circle" width="140" height="140" role="img">
+
+        <h5>stephen Opio</h5>
+           <div class="border rounded border-primary m-2">
+             <h6 class="text-muted">Projects Coordinator</h6>
+             <p class="">GrandHills Ltd</p>
+             <p>Oversees all projects.</p>
+        </div>
+       <div class="border rounded bg-white m-2">
+            <img src="{% static 'grandhills_site/static-only/images/facebook.png' %}"
+            class="m-2" width="40" height="40" role="img">
+
+            <img src="{% static 'grandhills_site/static-only/images/twitter.png' %}"
+            class="m-2" width="40" height="40" role="img">
+
+            <img src="{% static 'grandhills_site/static-only/images/instagram.png' %}"
+            class="m-2" width="40" height="40" role="img">
+
+            <img src="{% static 'grandhills_site/static-only/images/google-plus.png' %}"
+            class="m-2" width="40" height="40" role="img">
+
+       </div>
+      </div><!-- /.col-lg-4 -->
+
+
+    <div class="col-lg-4 border rounded border-primary pt-2 pb-2 px-0 m-3 w-25">
+       <img src="{% static 'grandhills_site/static-only/images/jp_me.jpg' %}"
+            class="rounded-circle" width="140" height="140" role="img">
+
+        <h5>Usher Bro</h5>
+           <div class="border rounded border-primary m-2">
+             <h6 class="text-muted">Projects Administrator</h6>
+             <p class="">GranHills Ltd</p>
+             <p>Oversees all projects.</p>
+        </div>
+       <div class="border rounded bg-white m-2">
+            <img src="{% static 'grandhills_site/static-only/images/facebook.png' %}"
+            class="m-2" width="40" height="40" role="img">
+
+            <img src="{% static 'grandhills_site/static-only/images/twitter.png' %}"
+            class="m-2" width="40" height="40" role="img">
+
+            <img src="{% static 'grandhills_site/static-only/images/instagram.png' %}"
+            class="m-2" width="40" height="40" role="img">
+
+            <img src="{% static 'grandhills_site/static-only/images/google-plus.png' %}"
+            class="m-2" width="40" height="40" role="img">
+
+       </div>
+      </div><!-- /.col-lg-4 -->
+
+
+
+
+  </div>
+
+</div>
+</div>
+{% empty %}
+{% endfor %}
+
 {% endblock %}
