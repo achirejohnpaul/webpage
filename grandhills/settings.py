@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'bootstrap4',
     'grandhills_site',
 
 ]
@@ -142,6 +143,10 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 django_heroku.settings(locals())
+
+BOOTSTRAP5 = {
+    'include_jquery': True,
+}
 
 """
     if DEBUG:
