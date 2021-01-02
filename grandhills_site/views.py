@@ -8,7 +8,8 @@ from django.urls import reverse
 
 def home(request):
     site_info = SiteInfor.objects.all()
-    return render(request, 'home_page.html', {'site_info': site_info})
+    context = {'site_info': site_info}
+    return render(request, 'home_page.html', context)
 
 
 class HomeView(ListView):
